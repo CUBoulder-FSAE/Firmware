@@ -1,0 +1,17 @@
+[
+   {
+      "directory" : "/home/dylan/workspace_ccstheia/Driverlib Empty CPU1 Example CCS Project/CPU1_RAM",
+      "command"   : "clang++ -I\"/home/dylan/workspace_ccstheia/Driverlib Empty CPU1 Example CCS Project\" -I\"/home/dylan/ti/C2000Ware_6_00_01_00\" -I\"/home/dylan/workspace_ccstheia/Driverlib Empty CPU1 Example CCS Project/device\" -I\"/home/dylan/ti/C2000Ware_6_00_01_00/driverlib/f28p65x/driverlib/\" -I\"/home/dylan/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -DRAM -DDEBUG -DCPU1 -I\"/home/dylan/workspace_ccstheia/Driverlib Empty CPU1 Example CCS Project/CPU1_RAM/syscfg\" -xc",
+      "file"      : "/home/dylan/workspace_ccstheia/Driverlib Empty CPU1 Example CCS Project/device/device.c"
+   },
+   {
+      "directory" : "/home/dylan/workspace_ccstheia/Driverlib Empty CPU1 Example CCS Project/CPU1_RAM",
+      "command"   : "clang++ -I\"/home/dylan/workspace_ccstheia/Driverlib Empty CPU1 Example CCS Project\" -I\"/home/dylan/ti/C2000Ware_6_00_01_00\" -I\"/home/dylan/workspace_ccstheia/Driverlib Empty CPU1 Example CCS Project/device\" -I\"/home/dylan/ti/C2000Ware_6_00_01_00/driverlib/f28p65x/driverlib/\" -I\"/home/dylan/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -DRAM -DDEBUG -DCPU1 -I\"/home/dylan/workspace_ccstheia/Driverlib Empty CPU1 Example CCS Project/CPU1_RAM/syscfg\"",
+      "file"      : "/home/dylan/workspace_ccstheia/Driverlib Empty CPU1 Example CCS Project/device/f28p65x_codestartbranch.asm"
+   },
+   {
+      "directory" : "/home/dylan/workspace_ccstheia/Driverlib Empty CPU1 Example CCS Project/CPU1_RAM",
+      "command"   : "clang++ -I\"/home/dylan/workspace_ccstheia/Driverlib Empty CPU1 Example CCS Project\" -I\"/home/dylan/ti/C2000Ware_6_00_01_00\" -I\"/home/dylan/workspace_ccstheia/Driverlib Empty CPU1 Example CCS Project/device\" -I\"/home/dylan/ti/C2000Ware_6_00_01_00/driverlib/f28p65x/driverlib/\" -I\"/home/dylan/ti/ccs2031/ccs/tools/compiler/ti-cgt-c2000_22.6.2.LTS/include\" -DRAM -DDEBUG -DCPU1 -I\"/home/dylan/workspace_ccstheia/Driverlib Empty CPU1 Example CCS Project/CPU1_RAM/syscfg\" -xc",
+      "file"      : "/home/dylan/workspace_ccstheia/Driverlib Empty CPU1 Example CCS Project/empty_driverlib_main.c"
+   }
+]
