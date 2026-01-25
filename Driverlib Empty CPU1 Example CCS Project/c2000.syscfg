@@ -22,8 +22,6 @@ const gpio5     = gpio.addInstance();
 const gpio6     = gpio.addInstance();
 const gpio7     = gpio.addInstance();
 const gpio8     = gpio.addInstance();
-const uart      = scripting.addModule("/driverlib/uart.js", {}, false);
-const uart1     = uart.addInstance();
 const FREERTOS  = scripting.addModule("/kernel/freertos_tool/FREERTOS", {}, false);
 const FREERTOS1 = FREERTOS.addInstance();
 
@@ -41,6 +39,9 @@ adc1.analog   = analog1;
 can1.$name                 = "CAN1";
 can1.can.can_rxPin.$assign = "GPIO5";
 can1.can.can_txPin.$assign = "GPIO4";
+
+const divider8       = system.clockTree["EPWMCLKDIV"];
+divider8.divideValue = 1;
 
 gpio1.$name           = "GPIO_TP16";
 gpio1.direction       = "GPIO_DIR_MODE_OUT";
@@ -71,11 +72,6 @@ gpio7.gpioPin.$assign = "GPIO222/TDI";
 gpio8.$name           = "GPIO_MCU_TDO";
 gpio8.direction       = "GPIO_DIR_MODE_OUT";
 gpio8.gpioPin.$assign = "GPIO223/TDO";
-
-uart1.$name                   = "UART";
-uart1.uart.uart_rxPin.$assign = "GPIO3";
-uart1.txQual.$name            = "myGPIOQUAL0";
-uart1.rxQual.$name            = "myGPIOQUAL1";
 
 FREERTOS1.$name = "myFREERTOS0";
 
@@ -126,5 +122,3 @@ analog1.analog["c7, gpio198Pin"].$suggestSolution  = "C7, GPIO198";
 analog1.analog["c8, gpio202Pin"].$suggestSolution  = "C8, GPIO202";
 analog1.analog["c9, gpio201Pin"].$suggestSolution  = "C9, GPIO201";
 can1.can.$suggestSolution                          = "CANA";
-uart1.uart.$suggestSolution                        = "UARTA";
-uart1.uart.uart_txPin.$suggestSolution             = "GPIO2";
