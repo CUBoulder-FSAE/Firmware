@@ -10,4 +10,4 @@ typedef struct logger_data{
     //vars
     uint8_t *data_t;
     int size;
-}logger_data;
+};
