@@ -10,11 +10,9 @@ void logger_send(logger_data sendData){
     //logger_data data;
     BaseType_t loggerStatusSend;
     while(1){
+
         loggerStatusSend = xQueueSend(loggerQueue, &sendData.data_t, pdMS_TO_TICKS(LOGGER_WAIT_TO_SEND));
         //Send to queue, wait for max of 100ms if queue is full
-        
-        //vTaskDelay(1000);
-        if (loggerStatusSend != pdPASS) {
             // Failed to send (queue was full for the entire 100ms)
             // #error Failed to send to queue
         }
