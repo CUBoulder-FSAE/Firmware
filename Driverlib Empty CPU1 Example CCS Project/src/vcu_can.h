@@ -21,8 +21,8 @@ typedef struct {
     uint32_t timestamp;         // Timestamp of message
 } CAN_Message_t;
 
-void CAN_initModule(void);
-void CAN_sendMessage(uint32_t msgId, uint8_t *data, uint8_t dlc);
-uint8_t CAN_receiveMessage(CAN_Message_t *msg);
+void vcu_can_init(void);
+void vcu_can_send_message(CAN_Message_t);
+uint8_t vcu_can_receive_message(CAN_Message_t *msg);
 
 #endif
