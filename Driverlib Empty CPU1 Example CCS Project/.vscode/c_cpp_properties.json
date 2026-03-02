@@ -1,0 +1,42 @@
+{
+  "version": 4,
+  "configurations": [
+    {
+      "name": "C2000",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/opt/ti/ccs2041/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/bin/cl2000",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+
+      "includePath": [
+        "${workspaceFolder}/**",
+
+        "/opt/ti/c2000/C2000Ware_6_00_01_00/kernel/FreeRTOS/Source/include/**",
+        "/opt/ti/c2000/C2000Ware_6_00_01_00/driverlib/f28p65x/driverlib/**",
+        "/opt/ti/ccs2041/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/include/**"
+        // "/opt/ti/c2000/C2000Ware_x_xx_xx_xx/driverlib/**",
+        // "/opt/ti/c2000/C2000Ware_x_xx_xx_xx/device_support/**",
+
+        
+      ],
+
+      "browse": {
+        "path": [
+          "${workspaceFolder}/**",
+          "/opt/ti/c2000/C2000Ware_6_00_01_00/**",
+          "/opt/ti/ccs2041/ccs/tools/compiler/ti-cgt-c2000_22.6.3.LTS/include/**"
+        ],
+        "limitSymbolsToIncludedHeaders": true
+      },
+
+      "defines": [
+        "_DEBUG",
+        "CPU1",
+        "LITTLE_ENDIAN",
+        "__TMS320C28XX__",
+        "__C28XX__",
+        "__TI_COMPILER_VERSION__=20000000"
+      ]
+    }
+  ]
+}
