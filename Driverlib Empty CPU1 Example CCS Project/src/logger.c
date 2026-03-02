@@ -7,7 +7,9 @@ void init() {
 }
 
 void logger_send(logger_data sendData){
-    //logger_data data;
+    logger_data data;
+    //memcpy(sendData.data, data, data_len)
+    memcpy(&sendData, &data, sendData.data_size);
     BaseType_t loggerStatusSend;
     while(1){
         loggerStatusSend = xQueueSend(loggerQueue, &sendData.data_t, pdMS_TO_TICKS(LOGGER_WAIT_TO_SEND));
@@ -19,7 +21,6 @@ void logger_send(logger_data sendData){
             // #error Failed to send to queue
         }
     }
-    
 
 }
 
@@ -28,11 +29,23 @@ void logger_receive(logger_data receivedData){
    BaseType_t loggerStatusReceive;
    
     while (1){
-        loggerStatusReceive = xQueueReceive(loggerQueue, &receivedData.data_t, portMAX_DELAY);
+        loggerStatusReceive = xQueueReceive(loggerQueue, &receivedData, portMAX_DELAY);
         //Receive data from queue, wait indefinitely until data is available
         
         if (loggerStatusReceive != pdPASS) {
-            //#error Failed to Receive to queue
+            //log fail
+            return;
         }
+        //send to CAN
+        CAN_Message_t msg;
+        //takes define
+        msg.id = LOGGER_CAN_ID;
+        //data
+        msg.data = receivedData.data_t;
+        //data length
+        msg.dlc = receivedData.data_size;
+
+        //CAN_send
     }
 }
+//vcu_can_send_message
