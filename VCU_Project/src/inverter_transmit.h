@@ -1,5 +1,5 @@
-//includes
-#include <stdint.h>
+#pragma once
+#include "driverlib.h"
 
 void inverter_transmit_init();
 
