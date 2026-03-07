@@ -54,6 +54,9 @@
 #include "board.h"
 #include "c2000ware_libraries.h"
 
+// Custom Includes
+#include "src/inverter_transmit.h"
+
 //
 // Main
 //
@@ -90,6 +93,9 @@ void main(void)
     // C2000Ware Library initialization
     //
     C2000Ware_libraries_init();
+
+    // Custom init functions
+    inverter_transmit_init();
 
     //
     // Enable Global Interrupt (INTM) and real time interrupt (DBGM)
