@@ -1,6 +1,6 @@
 //#############################################################################
 //
-// FILE:   empty_driverlib_main.c
+// FILE:   main.c
 //
 //! \addtogroup driver_example_list
 //! <h1>Empty Project Example</h1> 
